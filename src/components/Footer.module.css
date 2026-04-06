@@ -1,0 +1,64 @@
+/* Footer Styles */
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 48px var(--container-padding);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.3px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.listItem {
+  padding: 6px 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* Responsive - FIXED: class names now match the container class */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 32px 16px;
+  }
+}

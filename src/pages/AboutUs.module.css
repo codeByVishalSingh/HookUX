@@ -1,0 +1,225 @@
+/* ===========================
+   ABOUT US PAGE STYLES
+   =========================== */
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  background: var(--color-gray-100);
+  padding: 10px var(--container-padding);
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.breadcrumb a {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span[aria-current] {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+/* --- Ministry Header --- */
+.ministryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-200);
+  text-align: center;
+}
+
+.ministryLogo {
+  width: 56px;
+  height: auto;
+}
+
+.ministryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  line-height: 1.3;
+}
+
+.ministrySubtitle {
+  font-size: 13px;
+  color: var(--color-gray-500);
+  margin-top: 2px;
+}
+
+/* --- Content Section --- */
+.contentSection {
+  width: 80%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: var(--color-white);
+}
+
+.contentSection p {
+  line-height: 1.8;
+  color: var(--color-gray-700);
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* --- Section Titles --- */
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-bottom: 8px;
+  color: var(--color-gray-900);
+}
+
+.sectionTitle::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: var(--color-danger);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.sectionTitleAlt {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 36px 0 20px;
+  position: relative;
+  padding-bottom: 8px;
+  color: var(--color-gray-900);
+}
+
+.sectionTitleAlt::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: var(--color-danger);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* --- Members Section --- */
+.membersSection {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* --- Grid Layout --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gridSingle {
+  display: grid;
+  grid-template-columns: 260px;
+  gap: 20px;
+}
+
+/* --- Card --- */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px 16px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.cardImage {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  border: 3px solid var(--color-gray-100);
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-gray-900);
+}
+
+.cardRole {
+  font-size: 13px;
+  color: var(--color-gray-500);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.cardDetail {
+  font-size: 13px;
+  color: var(--color-gray-700);
+  margin-top: 4px;
+}
+
+.cardLink {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contentSection {
+    width: 95%;
+    padding: 20px 16px;
+  }
+
+  .membersSection {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .ministryHeader {
+    flex-direction: column;
+    padding: 20px 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .gridSingle {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle,
+  .sectionTitleAlt {
+    font-size: 18px;
+  }
+}
